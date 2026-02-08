@@ -1,58 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Faisal | Cloud Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      padding: 0;
+      box-sizing: border-box;
     }
-    header {
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #020617, #0f172a);
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    /* HERO */
+    .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 20px;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+
+    .hero h1 {
+      font-size: 3.2rem;
     }
-    p {
+
+    .hero p {
+      max-width: 650px;
+      margin: 20px auto;
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
       color: #cbd5f5;
     }
+
+    .btn-group {
+      margin-top: 30px;
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 25px;
+      margin: 10px;
+      padding: 12px 26px;
       background: #38bdf8;
       color: #020617;
-      text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #0ea5e9;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      text-align: center;
+    }
+
+    .skill-box {
+      background: #020617;
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-box i {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    /* PROJECTS */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #94a3b8;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <div>
-    <h1>Hi, I'm Faisal</h1>
-    <p>
-      IT Support Technician transitioning into Cloud & AWS roles.
-      Passionate about Linux, networking, and cloud infrastructure.
-    </p>
-    <a class="btn" href="#">View My Projects</a>
-  </div>
-</header>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm Faisal</h1>
+      <p>
+        IT Support Technician transitioning into Cloud & AWS roles.
+        Hands-on with Linux, networking, EC2, S3, IAM, and real-world cloud projects.
+      </p>
+
+      <div class="btn-group">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="resume.pdf" download>Download Resume</a>
+        <a class="btn" href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-box"><i class="ri-cloud-line"></i><p>AWS (EC2, S3, IAM)</p></div>
+      <div class="skill-box"><i class="ri-terminal-line"></i><p>Linux</p></div>
+      <div class="skill-box"><i class="ri-global-line"></i><p>Networking</p></div>
+      <div class="skill-box"><i class="ri-database-2-line"></i><p>RDS / Databases</p></div>
+      <div class="skill-box"><i class="ri-git-branch-line"></i><p>GitHub</p></div>
+      <div class="skill-box"><i class="ri-server-line"></i><p>Nginx</p></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>AWS 3-Tier Architecture</h3>
+        <p>Deployed frontend, backend, and RDS database using EC2 and VPC.</p>
+        <a href="#">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Login System with Database</h3>
+        <p>User authentication system with backend verification.</p>
+        <a href="#">View on GitHub →</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Nginx Reverse Proxy</h3>
+        <p>Configured Nginx as a reverse proxy for multiple services.</p>
+        <a href="#">View on GitHub →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Faisal | Cloud & IT Portfolio
+  </footer>
 
 </body>
 </html>
