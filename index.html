@@ -1,207 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Faisal | Cloud Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>Mohamed Faisal | Cloud & DevOps Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(120deg, #020617, #0f172a);
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
+body{
+  font-family: "Segoe UI", sans-serif;
+  background:
+    linear-gradient(rgba(2,6,23,0.85),rgba(2,6,23,0.85)),
+    url("assets/bg.jpg") center/cover no-repeat;
+  color:#e5e7eb;
+  line-height:1.6;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+section{padding:90px 10%}
 
-    section {
-      padding: 80px 10%;
-    }
+h2{
+  text-align:center;
+  font-size:2.3rem;
+  margin-bottom:45px;
+}
 
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      text-align: center;
-    }
+a{text-decoration:none;color:inherit}
 
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+/* Animations */
+.fade-up{
+  animation: fadeUp 1s ease forwards;
+  opacity:0;
+}
 
-    .hero h1 {
-      font-size: 3.2rem;
-    }
+@keyframes fadeUp{
+  from{transform:translateY(30px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
 
-    .hero p {
-      max-width: 650px;
-      margin: 20px auto;
-      font-size: 1.2rem;
-      color: #cbd5f5;
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
 
-    .btn-group {
-      margin-top: 30px;
-    }
+.hero img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #38bdf8;
+  margin-bottom:25px;
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 26px;
-      background: #38bdf8;
-      color: #020617;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.hero h1{font-size:3.3rem}
+.hero span{color:#38bdf8}
 
-    .btn:hover {
-      transform: translateY(-3px);
-      background: #0ea5e9;
-    }
+.hero p{
+  max-width:780px;
+  margin:25px auto;
+  font-size:1.15rem;
+  color:#cbd5f5;
+}
 
-    /* SKILLS */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 25px;
-      text-align: center;
-    }
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:12px 28px;
+  background:#38bdf8;
+  color:#020617;
+  border-radius:8px;
+  font-weight:600;
+  transition:.3s;
+}
 
-    .skill-box {
-      background: #020617;
-      padding: 25px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
+.btn:hover{
+  background:#0ea5e9;
+  transform:translateY(-4px);
+}
 
-    .skill-box:hover {
-      transform: translateY(-5px);
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
 
-    .skill-box i {
-      font-size: 2.5rem;
-      color: #38bdf8;
-      margin-bottom: 10px;
-    }
+.card{
+  background:#020617;
+  padding:28px;
+  border-radius:16px;
+  transition:.3s;
+}
 
-    /* PROJECTS */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+.card:hover{transform:translateY(-8px)}
 
-    .project-card {
-      background: #020617;
-      padding: 25px;
-      border-radius: 12px;
-    }
+.card h3{color:#38bdf8;margin-bottom:10px}
 
-    .project-card h3 {
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
+/* Skills */
+.skill i{
+  font-size:2.5rem;
+  color:#38bdf8;
+  margin-bottom:12px;
+}
 
-    .project-card p {
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-    }
-
-    .project-card a {
-      color: #38bdf8;
-      font-weight: bold;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-  </style>
+/* Footer */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#94a3b8;
+  font-size:.9rem;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <h1>Hi, I'm Faisal</h1>
-      <p>
-        IT Support Technician transitioning into Cloud & AWS roles.
-        Hands-on with Linux, networking, EC2, S3, IAM, and real-world cloud projects.
-      </p>
+<!-- HERO -->
+<section class="hero fade-up">
+<div>
+  <img src="assets/profile.jpg" alt="Mohamed Faisal">
 
-      <div class="btn-group">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="resume.pdf" download>Download Resume</a>
-        <a class="btn" href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </section>
+  <h1>Mohamed <span>Faisal</span></h1>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill-box"><i class="ri-cloud-line"></i><p>AWS (EC2, S3, IAM)</p></div>
-      <div class="skill-box"><i class="ri-terminal-line"></i><p>Linux</p></div>
-      <div class="skill-box"><i class="ri-global-line"></i><p>Networking</p></div>
-      <div class="skill-box"><i class="ri-database-2-line"></i><p>RDS / Databases</p></div>
-      <div class="skill-box"><i class="ri-git-branch-line"></i><p>GitHub</p></div>
-      <div class="skill-box"><i class="ri-server-line"></i><p>Nginx</p></div>
-    </div>
-  </section>
+  <p>
+    IT Support Technician with <strong>2+ years of hands-on technical experience</strong>,
+    transitioning into <strong>Cloud & DevOps Engineer</strong> roles.
+    Experienced in AWS infrastructure, serverless architectures, Linux systems,
+    networking fundamentals, and CI/CD automation.
+    <br><br>
+    Actively building scalable, secure, and production-ready cloud solutions.
+  </p>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
+  <a class="btn" href="#projects">View Projects</a>
+  <a class="btn" href="resume.pdf" download>Download Resume</a>
+  <a class="btn" href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+  <a class="btn" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+</div>
+</section>
 
-      <div class="project-card">
-        <h3>AWS 3-Tier Architecture</h3>
-        <p>Deployed frontend, backend, and RDS database using EC2 and VPC.</p>
-        <a href="#">View on GitHub →</a>
-      </div>
+<!-- SKILLS -->
+<section class="fade-up">
+<h2>Technical Skills</h2>
+<div class="grid">
 
-      <div class="project-card">
-        <h3>Login System with Database</h3>
-        <p>User authentication system with backend verification.</p>
-        <a href="#">View on GitHub →</a>
-      </div>
+<div class="card skill"><i class="ri-cloud-line"></i><p>AWS – EC2, S3, RDS, IAM</p></div>
+<div class="card skill"><i class="ri-global-line"></i><p>CloudFront & Route 53</p></div>
+<div class="card skill"><i class="ri-terminal-line"></i><p>Linux & Windows Systems</p></div>
+<div class="card skill"><i class="ri-git-branch-line"></i><p>Git, GitHub, CI/CD</p></div>
+<div class="card skill"><i class="ri-database-2-line"></i><p>DynamoDB & Databases</p></div>
+<div class="card skill"><i class="ri-server-line"></i><p>Docker, Kubernetes, Jenkins</p></div>
 
-      <div class="project-card">
-        <h3>Nginx Reverse Proxy</h3>
-        <p>Configured Nginx as a reverse proxy for multiple services.</p>
-        <a href="#">View on GitHub →</a>
-      </div>
+</div>
+</section>
 
-    </div>
-  </section>
+<!-- PROJECTS -->
+<section id="projects" class="fade-up">
+<h2>Projects</h2>
+<div class="grid">
 
-  <footer>
-    © 2026 Faisal | Cloud & IT Portfolio
-  </footer>
+<div class="card">
+<h3>Serverless Feedback Collection System</h3>
+<p>
+Built a scalable AWS serverless solution using CloudFront, S3, API Gateway,
+Lambda, DynamoDB, and SNS. Implemented secure submissions, automated email
+notifications, and CI/CD pipelines using GitHub Actions.
+</p>
+<a href="#">View on GitHub →</a>
+</div>
+
+<div class="card">
+<h3>AWS Three-Tier Architecture</h3>
+<p>
+Designed and deployed a highly available three-tier architecture using
+Application Load Balancer, Auto Scaling EC2, and Multi-AZ RDS,
+focusing on security, scalability, and fault tolerance.
+</p>
+<a href="#">View on GitHub →</a>
+</div>
+
+<div class="card">
+<h3>Static Website Hosting (Serverless)</h3>
+<p>
+Hosted a production-ready static website using Amazon S3, CloudFront,
+and Route 53 with custom domain and global content delivery.
+</p>
+<a href="#">View on GitHub →</a>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="fade-up">
+<h2>Professional Experience</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Technical Support – Sintron Electronics</h3>
+<p>
+Providing Level-1 technical support in a production environment.
+Responsible for troubleshooting system, application, and basic network issues,
+monitoring system health, and ensuring minimal downtime for users.
+</p>
+</div>
+
+<div class="card">
+<h3>Inventory Auditor – Foxconn</h3>
+<p>
+Performed inventory audits, reconciled system and physical stock,
+identified discrepancies, and maintained accurate records using SAP and Excel.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="fade-up">
+<h2>Education</h2>
+<div class="card">
+<h3>B.Sc Electronics – CGPA 8.2</h3>
+<p>
+Shanmuga Industries of Arts & Science<br>
+<strong>University Rank 3</strong>
+</p>
+</div>
+</section>
+
+<footer>
+© 2026 Mohamed Faisal | Cloud & DevOps Portfolio
+</footer>
 
 </body>
 </html>
