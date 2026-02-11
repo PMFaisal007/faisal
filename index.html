@@ -1,241 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Mohamed Faisal | Cloud & DevOps Engineer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohamed Faisal | Cloud & DevOps Engineer</title>
 
-<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+    body {
+      background: linear-gradient(
+          rgba(15,23,42,0.92),
+          rgba(15,23,42,0.92)
+        ),
+        url("assets/background.jpg") center/cover fixed;
+      color: #e5e7eb;
+      line-height: 1.7;
+      animation: fadeIn 1.2s ease-in;
+    }
 
-body{
-  font-family: "Segoe UI", sans-serif;
-  background:
-    linear-gradient(rgba(2,6,23,0.85),rgba(2,6,23,0.85)),
-    url("assets/bg.jpg") center/cover no-repeat;
-  color:#e5e7eb;
-  line-height:1.6;
-}
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-section{padding:90px 10%}
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 50px 20px;
+    }
 
-h2{
-  text-align:center;
-  font-size:2.3rem;
-  margin-bottom:45px;
-}
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      animation: slideDown 1.2s ease;
+    }
 
-a{text-decoration:none;color:inherit}
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-/* Animations */
-.fade-up{
-  animation: fadeUp 1s ease forwards;
-  opacity:0;
-}
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px rgba(56,189,248,0.4);
+    }
 
-@keyframes fadeUp{
-  from{transform:translateY(30px);opacity:0}
-  to{transform:translateY(0);opacity:1}
-}
+    header h1 {
+      font-size: 2.8rem;
+      color: #38bdf8;
+    }
 
-/* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
+    header h2 {
+      font-weight: 400;
+      color: #94a3b8;
+      margin-top: 6px;
+    }
 
-.hero img{
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid #38bdf8;
-  margin-bottom:25px;
-}
+    header p {
+      margin-top: 15px;
+      max-width: 720px;
+      margin-inline: auto;
+      color: #cbd5f5;
+    }
 
-.hero h1{font-size:3.3rem}
-.hero span{color:#38bdf8}
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-.hero p{
-  max-width:780px;
-  margin:25px auto;
-  font-size:1.15rem;
-  color:#cbd5f5;
-}
+    .btn {
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      background: transparent;
+    }
 
-.btn{
-  display:inline-block;
-  margin:10px;
-  padding:12px 28px;
-  background:#38bdf8;
-  color:#020617;
-  border-radius:8px;
-  font-weight:600;
-  transition:.3s;
-}
+    .btn:hover {
+      background: #38bdf8;
+      color: #020617;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(56,189,248,0.35);
+    }
 
-.btn:hover{
-  background:#0ea5e9;
-  transform:translateY(-4px);
-}
+    section {
+      margin-bottom: 45px;
+      animation: fadeIn 1.4s ease;
+    }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
+    section h3 {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      border-left: 4px solid #38bdf8;
+      padding-left: 12px;
+    }
 
-.card{
-  background:#020617;
-  padding:28px;
-  border-radius:16px;
-  transition:.3s;
-}
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
 
-.card:hover{transform:translateY(-8px)}
+    .skill-box {
+      background: rgba(2,6,23,0.85);
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #1e293b;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-.card h3{color:#38bdf8;margin-bottom:10px}
+    .skill-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
 
-/* Skills */
-.skill i{
-  font-size:2.5rem;
-  color:#38bdf8;
-  margin-bottom:12px;
-}
+    .card {
+      background: rgba(2,6,23,0.85);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+      margin-bottom: 18px;
+      transition: transform 0.3s ease;
+    }
 
-/* Footer */
-footer{
-  text-align:center;
-  padding:30px;
-  color:#94a3b8;
-  font-size:.9rem;
-}
-</style>
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h4 {
+      color: #38bdf8;
+      margin-bottom: 6px;
+    }
+
+    .card span {
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #cbd5f5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero fade-up">
-<div>
-  <img src="assets/profile.jpg" alt="Mohamed Faisal">
+  <div class="container">
 
-  <h1>Mohamed <span>Faisal</span></h1>
+    <!-- HEADER -->
+    <header>
+      <img src="assets/profile.jpg" alt="Mohamed Faisal" class="profile-pic"/>
 
-  <p>
-    IT Support Technician with <strong>2+ years of hands-on technical experience</strong>,
-    transitioning into <strong>Cloud & DevOps Engineer</strong> roles.
-    Experienced in AWS infrastructure, serverless architectures, Linux systems,
-    networking fundamentals, and CI/CD automation.
-    <br><br>
-    Actively building scalable, secure, and production-ready cloud solutions.
-  </p>
+      <h1>Mohamed Faisal</h1>
+      <h2>IT Support Technician → Cloud & DevOps Engineer</h2>
 
-  <a class="btn" href="#projects">View Projects</a>
-  <a class="btn" href="resume.pdf" download>Download Resume</a>
-  <a class="btn" href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
-  <a class="btn" href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-</div>
-</section>
+      <p>
+        Technical Support professional transitioning into Cloud Computing with hands-on AWS,
+        networking, and DevOps experience. Passionate about building scalable, secure cloud solutions.
+      </p>
 
-<!-- SKILLS -->
-<section class="fade-up">
-<h2>Technical Skills</h2>
-<div class="grid">
+      <div class="buttons">
+        <a class="btn" href="assets/Mohamed-Faisal-Resume.pdf" download>📄 Download Resume</a>
+        <a class="btn" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">💻 GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">🔗 LinkedIn</a>
+      </div>
+    </header>
 
-<div class="card skill"><i class="ri-cloud-line"></i><p>AWS – EC2, S3, RDS, IAM</p></div>
-<div class="card skill"><i class="ri-global-line"></i><p>CloudFront & Route 53</p></div>
-<div class="card skill"><i class="ri-terminal-line"></i><p>Linux & Windows Systems</p></div>
-<div class="card skill"><i class="ri-git-branch-line"></i><p>Git, GitHub, CI/CD</p></div>
-<div class="card skill"><i class="ri-database-2-line"></i><p>DynamoDB & Databases</p></div>
-<div class="card skill"><i class="ri-server-line"></i><p>Docker, Kubernetes, Jenkins</p></div>
+    <!-- SKILLS -->
+    <section>
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill-box">AWS (EC2, S3, RDS, CloudFront, Route 53, IAM)</div>
+        <div class="skill-box">Linux & Windows Administration</div>
+        <div class="skill-box">Docker & Kubernetes</div>
+        <div class="skill-box">Git, GitHub & Jenkins</div>
+        <div class="skill-box">TCP/IP, DNS, Subnetting</div>
+        <div class="skill-box">Server Configuration & Troubleshooting</div>
+      </div>
+    </section>
 
-</div>
-</section>
+    <!-- EXPERIENCE -->
+    <section>
+      <h3>Experience</h3>
 
-<!-- PROJECTS -->
-<section id="projects" class="fade-up">
-<h2>Projects</h2>
-<div class="grid">
+      <div class="card">
+        <h4>Technical Support Technician</h4>
+        <span>Sintron Electronics, Chennai | Feb 2024 – Present</span>
+        <ul>
+          <li>Provide Level 1 system, application, and network support.</li>
+          <li>Troubleshoot production issues and monitor system health.</li>
+          <li>Resolve hardware, software, and connectivity problems.</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Serverless Feedback Collection System</h3>
-<p>
-Built a scalable AWS serverless solution using CloudFront, S3, API Gateway,
-Lambda, DynamoDB, and SNS. Implemented secure submissions, automated email
-notifications, and CI/CD pipelines using GitHub Actions.
-</p>
-<a href="#">View on GitHub →</a>
-</div>
+      <div class="card">
+        <h4>Inventory Auditor</h4>
+        <span>Foxconn Hon Hai | Feb 2023 – Nov 2023</span>
+        <ul>
+          <li>Performed physical vs system inventory audits.</li>
+          <li>Worked with SAP and Excel for reporting.</li>
+        </ul>
+      </div>
+    </section>
 
-<div class="card">
-<h3>AWS Three-Tier Architecture</h3>
-<p>
-Designed and deployed a highly available three-tier architecture using
-Application Load Balancer, Auto Scaling EC2, and Multi-AZ RDS,
-focusing on security, scalability, and fault tolerance.
-</p>
-<a href="#">View on GitHub →</a>
-</div>
+    <!-- PROJECTS -->
+    <section>
+      <h3>Projects</h3>
 
-<div class="card">
-<h3>Static Website Hosting (Serverless)</h3>
-<p>
-Hosted a production-ready static website using Amazon S3, CloudFront,
-and Route 53 with custom domain and global content delivery.
-</p>
-<a href="#">View on GitHub →</a>
-</div>
+      <div class="card">
+        <h4>Serverless Feedback Collection System</h4>
+        <ul>
+          <li>AWS S3, CloudFront, API Gateway, Lambda, DynamoDB, SNS</li>
+          <li>CI/CD automation using GitHub Actions</li>
+        </ul>
+      </div>
 
-</div>
-</section>
+      <div class="card">
+        <h4>Three-Tier AWS Architecture</h4>
+        <ul>
+          <li>ALB, Auto Scaling EC2, Multi-AZ RDS</li>
+          <li>Highly available and scalable design</li>
+        </ul>
+      </div>
+    </section>
 
-<!-- EXPERIENCE -->
-<section class="fade-up">
-<h2>Professional Experience</h2>
-<div class="grid">
+    <footer>
+      © 2026 Mohamed Faisal | Cloud & DevOps Portfolio
+    </footer>
 
-<div class="card">
-<h3>Technical Support – Sintron Electronics</h3>
-<p>
-Providing Level-1 technical support in a production environment.
-Responsible for troubleshooting system, application, and basic network issues,
-monitoring system health, and ensuring minimal downtime for users.
-</p>
-</div>
-
-<div class="card">
-<h3>Inventory Auditor – Foxconn</h3>
-<p>
-Performed inventory audits, reconciled system and physical stock,
-identified discrepancies, and maintained accurate records using SAP and Excel.
-</p>
-</div>
-
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section class="fade-up">
-<h2>Education</h2>
-<div class="card">
-<h3>B.Sc Electronics – CGPA 8.2</h3>
-<p>
-Shanmuga Industries of Arts & Science<br>
-<strong>University Rank 3</strong>
-</p>
-</div>
-</section>
-
-<footer>
-© 2026 Mohamed Faisal | Cloud & DevOps Portfolio
-</footer>
+  </div>
 
 </body>
 </html>
